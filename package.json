@@ -1,0 +1,72 @@
+{
+  "name": "express-es6-rest-api",
+  "version": "0.3.0",
+  "description": "Starter project for an ES6 RESTful Express API",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "repository": "developit/express-es6-rest-api",
+  "author": "Jason Miller <jason@developit.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bcryptjs": "2.4.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.18.2",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "cross-env": "^5.0.1",
+    "dotenv-safe": "^4.0.4",
+    "express": "^4.16.2",
+    "express-validation": "^1.0.2",
+    "helmet": "^3.5.0",
+    "http-status": "^1.0.1",
+    "joi": "^10.4.1",
+    "jwt-simple": "0.5.1",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.8",
+    "moment-timezone": "^0.5.13",
+    "mongoose": "^4.9.7",
+    "morgan": "^1.8.0",
+    "newman": "^3.9.3",
+    "nodegit": "^0.20.3",
+    "nodemailer": "^4.4.1",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "3.0.0",
+    "pm2": "^2.4.6",
+    "redis": "^2.8.0",
+    "resource-router-middleware": "^0.6.0",
+    "selenium-webdriver": "^3.6.0",
+    "socket.io": "^2.0.4",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^3.0.8",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.1.1",
+    "nodemon": "^1.9.2"
+  }
+}
